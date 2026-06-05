@@ -40,8 +40,8 @@ function GeomanControls({ onChange, geometryType }: { onChange?: (geojson: any) 
     const handleChange = () => {
       const layers: any[] = []
       map.eachLayer((layer: any) => {
-        if (layer.toGeoJSON && layer instanceof L.Path) {
-          layers.push(layer.toGeoJSON())
+        if (typeof layer.toGeoJSON === 'function' && layer instanceof L.Path) {
+          layers.push((layer as any).toGeoJSON())
         }
       })
       if (layers.length === 0) {
