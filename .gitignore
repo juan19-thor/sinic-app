@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+.venv/
+env/
+*.egg-info/
+dist/
+build/
+.eggs/
+.pytest_cache/
+*.log
+
+# Env files con contraseñas reales (NO subir)
+backend/.env
+frontend/.env
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Alembic auto-generated (opcional subir)
+alembic/versions/*.py
+
+# Postgres dumps temporales (NO subir dumps con contraseñas)
+# El backup limpio sí va al repo
+*.dump
